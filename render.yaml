@@ -1,0 +1,11 @@
+services:
+- type: web
+  name: tododle
+  env: python
+  buildCommand: "pip install -r requirements.txt"
+  startCommand: "gunicorn 'app:create_app()' -b 0.0.0.0:10000"
+  envVars:
+  - key: SECRET_KEY
+    value: <your_secret_key>
+  - key: DATABASE_URL
+    value: <your_render_database_url>
