@@ -11,4 +11,6 @@ services:
     value: <your_render_database_url>
   build:
     - pip install -r requirements.txt
+    - if [ ! -d "migrations" ]; then flask db init; fi
+    - flask db migrate
     - flask db upgrade
