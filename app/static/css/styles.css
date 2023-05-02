@@ -1,0 +1,53 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('/static/img/desktop.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
+}
+
+.background-img {
+  display: flex;
+  flex: 1; /* Ensure that the background-wrapper takes the remaining space */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.content-wrapper {
+  background-color: white;
+  position: absolute;
+  left: 17%; /* Adjust the percentage to move the wrapper left */
+  top: 20%; /* Adjust the percentage to move the wrapper down */
+  width: 650px;
+  height: 77%; /* Set a fixed height for the content-wrapper */
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow-y: auto; /* Enable scrolling if the content height exceeds the content-wrapper height */
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Handlee', cursive;
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.login-register-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 18px;
+}

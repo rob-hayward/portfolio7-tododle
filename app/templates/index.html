@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% if not current_user.is_authenticated %}
+    <h2>Sign in or register to start managing your tasks.</h2>
+    <p>
+      <a href="{{ url_for('main.login') }}" class="btn btn-primary login-register-btn">Login</a>
+      <a href="{{ url_for('main.register') }}" class="btn btn-secondary login-register-btn">Register</a>
+
+    </p>
+
+{% else %}
+<a href="{{ url_for('main.tasks') }}" class="btn btn-primary login-register-btn">My Tododle List</a>
+{% endif %}
+{% endblock %}
