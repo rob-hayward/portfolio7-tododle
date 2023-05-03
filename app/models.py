@@ -26,10 +26,6 @@ class Task(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 
-with app.app_context():
-    db.create_all()
-
-
 @login_manager.user_loader
 def load_user(id):
     return User.query.get(int(id))
