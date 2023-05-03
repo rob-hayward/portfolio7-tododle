@@ -8,7 +8,7 @@ class Config:
     LOCAL_PASSWORD = 'new_password'
     LOCAL_DBNAME = 'tododledb'
     DATABASE_URL = os.environ.get('DATABASE_URL') or \
-                   f'postgresql://{LOCAL_USERNAME}:{LOCAL_PASSWORD}@localhost:5432/{LOCAL_DBNAME}'
+                   'postgresql://tododle_user:vVCohCRoVYRmLo0bOq5UklAWUbsDZ06N@dpg-ch5unqceoogtlcr6l6sg-a.frankfurt-postgres.render.com/tododle'
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = DATABASE_URL
