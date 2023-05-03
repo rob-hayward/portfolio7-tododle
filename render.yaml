@@ -2,15 +2,10 @@ services:
 - type: web
   name: tododle
   env: python
-  buildCommand: "pip install -r requirements.txt"
+  buildCommand: "pip install -r requirements.txt && FLASK_APP=app python -m flask db upgrade"
   startCommand: "gunicorn 'app:create_app()' -b 0.0.0.0:10000"
   envVars:
   - key: SECRET_KEY
     value: <your_secret_key>
   - key: DATABASE_URL
     value: <your_render_database_url>
-  build:
-    - pip install -r requirements.txt
-    - if [ ! -d "migrations" ]; then flask db init; fi
-    - flask db migrate
-    - flask db upgrade
